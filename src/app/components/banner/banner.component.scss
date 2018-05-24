@@ -1,0 +1,43 @@
+:host{
+    display: flex;
+    justify-content: flex-end;
+    .banner{
+        background: linear-gradient(to right,#bcee9e,#33f5e3);
+        width: 92%;
+        min-height: 95vh;
+        display: flex;
+        align-self: center;
+        img{
+            margin-left: -7%;
+            width: 50%;
+            height: 80%;
+            align-self: center;
+        }
+        .info{
+            align-self: center;
+            margin-left: 15%;
+            span{
+                font-size: xx-large;
+                font-family: serif;
+            }
+            h1{
+                font-size: 90px;
+                font-weight: 700
+            }
+            button{
+                padding: 5% 15%;
+                border-radius: 50px;
+                background-color: black;
+                color:white;
+                font-size: xxx-large;
+                font-weight: 800
+            }
+            button:hover{
+                background-color: white;
+                color:black
+            }
+        }
+    }
+    
+    
+}

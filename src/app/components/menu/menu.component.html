@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <img src="../../../assets/images/logo.png" alt="">
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">  
+    <ul class="nav navbar-nav navbar-right login">
+      <li><a href="#">LOG IN</a></li>
+      <li><a href="#">SIGN UP</a></li>
+      <li>
+          <input type="search" [(ngModel)]='keyword' class="search" placeholder="Search book">       
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right menu">
+      <li><a href="#">E-BOOKS</a></li>
+      <li><a href="#">CLASS</a></li> 
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
