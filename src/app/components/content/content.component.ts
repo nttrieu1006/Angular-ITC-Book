@@ -8,6 +8,8 @@ import { IBook } from '../../interface/IBook.class';
 })
 export class ContentComponent implements OnInit {
 
+  isViewList:boolean = false;
+  keyword:String = '';
   constructor() { }
 
   ngOnInit() {
@@ -20,11 +22,8 @@ export class ContentComponent implements OnInit {
     { cover : '../../../assets/images/asset-4.png',name : 'RESTful API với NODEJS',link : ''},
     { cover : '../../../assets/images/asset-5.png',name : 'mongoDB TOÀN TẬP',link : ''},
   ];
-  isViewList:boolean = false;
-  changed:boolean = false;
-  keyword:String = "";
-  changeOption(change:boolean){    
-    this.changed = change;
+  
+  changeOption(change:boolean){
     this.isViewList = change;
   }
 }

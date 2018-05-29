@@ -6,10 +6,10 @@
     <div class="main-header-right">
       <input type="search" [(ngModel)]='keyword' class="search" placeholder="Search book">
       <div class="options">
-        <div class="grid-option list {{ changed? '' : 'active' }}" (click)="changeOption(false);">
+        <div class="grid-option list {{ isViewList? '' : 'active' }}" (click)="changeOption(false);">
           <img src="../../../assets/images/list.png" alt="bar-menu">
         </div>
-        <div class="list-option list {{ changed? 'active' : '' }}" (click)="changeOption(true);">
+        <div class="list-option list {{ isViewList? 'active' : '' }}" (click)="changeOption(true);">
           <img src="../../../assets/images/list-2.png" alt="squares">
         </div>
       </div>
