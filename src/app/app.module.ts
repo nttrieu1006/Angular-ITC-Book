@@ -9,6 +9,8 @@ import { ContentComponent } from './components/content/content.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { BookComponent } from './components/book/book.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { BookService } from './services/book.service';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -22,9 +24,10 @@ import { FilterPipe } from './pipes/filter.pipe';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
