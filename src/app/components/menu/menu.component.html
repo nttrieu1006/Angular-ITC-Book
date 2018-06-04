@@ -16,7 +16,7 @@
       <li><a href="#">LOG IN</a></li>
       <li><a href="#">SIGN UP</a></li>
       <li>
-          <input type="search" [(ngModel)]='keyword' class="search" placeholder="Search book">       
+          <input type="search" [(ngModel)]='keyword' (change)="searchBook(keyword)" class="search" placeholder="Search book">       
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right menu">

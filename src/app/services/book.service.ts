@@ -22,8 +22,8 @@ export class BookService {
   getBooks(){
     this.getBookFromServer();
   }
-  // searchBooks(keyword : string){
-  //   let books = this._books.getValue().filter(x=>x.name.includes(keyword));
-  //   this._books.next(books);
-  // }
+  searchBooks(keyword : string){
+    let books = this._books.getValue().filter(x=>x.name.toLowerCase().includes(keyword.toLowerCase()));
+    this._books.next(books);
+  }
 }

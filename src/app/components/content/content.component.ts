@@ -20,9 +20,10 @@ export class ContentComponent implements OnInit {
     });
     this.booksService.getBooks();
   }
-  
-  
   changeOption(change:boolean){
     this.isViewList = change;
+  }
+  searchBook(keyword: string){
+    this.booksService.searchBooks(keyword);
   }
 }

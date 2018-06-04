@@ -4,7 +4,7 @@
       <p>popular e-books</p>
     </div>
     <div class="main-header-right">
-      <input type="search" [(ngModel)]='keyword' class="search" placeholder="Search book">
+      <input type="search" [(ngModel)]='keyword' (change)="searchBook(keyword)" class="search" placeholder="Search book">
       <div class="options">
         <div class="grid-option list {{ isViewList? '' : 'active' }}" (click)="changeOption(false);">
           <img src="../../../assets/images/list.png" alt="bar-menu">
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="list-books">
-    <div [ngClass]="['box',isViewList? 'list' : '']" *ngFor="let book of books | filter : keyword">
+    <div [ngClass]="['box',isViewList? 'list' : '']" *ngFor="let book of books ">
       <app-book [book]="book"></app-book>
     </div>
   </div>

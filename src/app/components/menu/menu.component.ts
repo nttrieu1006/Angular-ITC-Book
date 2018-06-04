@@ -1,3 +1,4 @@
+import { BookService } from './../../services/book.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  keyword: string ='';
+  constructor(private bookService: BookService) { }
 
   ngOnInit() {
   }
 
+  searchBook(keyword: string){
+    this.bookService.searchBooks(keyword);
+  }
 }
