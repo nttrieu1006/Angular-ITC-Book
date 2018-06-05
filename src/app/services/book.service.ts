@@ -2,7 +2,7 @@ import { IBook } from './../interface/IBook.class';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Http } from '@angular/http';
-
+import * as uuid from 'uuid';
 @Injectable()
 export class BookService {
 
@@ -25,5 +25,12 @@ export class BookService {
   searchBooks(keyword : string){
     let books = this._books.getValue().filter(x=>x.name.toLowerCase().includes(keyword.toLowerCase()));
     this._books.next(books);
+  }
+  addBook(book : IBook){
+    book.id = uuid.v4();
+    this.http.post(this.api,book).subscribe(data=>{
+      this._books.getValue().push(book);
+      this._books.next(this._books.getValue());
+    });
   }
 }

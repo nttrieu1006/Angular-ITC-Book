@@ -1,34 +1,10 @@
 {
-    "books": [
-        {
-            "cover": "../../../assets/images/asset-0.png",
-            "name": "RESTful API với NODEJS",
-            "link": ""
-        },
-        {
-            "cover": "../../../assets/images/asset-2.png",
-            "name": "LẬP TRÌNH C",
-            "link": ""
-        },
-        {
-            "cover": "../../../assets/images/asset-1.png",
-            "name": "FRONT-END CƠ BẢN",
-            "link": ""
-        },
-        {
-            "cover": "../../../assets/images/asset-3.png",
-            "name": "ANGULAR CƠ BẢN",
-            "link": ""
-        },
-        {
-            "cover": "../../../assets/images/asset-4.png",
-            "name": "RESTful API với NODEJS",
-            "link": ""
-        },
-        {
-            "cover": "../../../assets/images/asset-5.png",
-            "name": "mongoDB TOÀN TẬP",
-            "link": ""
-        }
-    ]
+  "books": [
+    {
+      "name": "Free Vector",
+      "cover": "https://image.freepik.com/free-vector/book-cover-template-design_1201-30.jpg",
+      "link": "",
+      "id": "ad711bd9-c172-404b-8a0f-7466752bc240"
+    }
+  ]
 }
