@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -11,8 +11,8 @@ import { BookComponent } from './components/book/book.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { BookService } from './services/book.service';
 import { HttpModule } from '@angular/http';
-
-
+import { AddbookComponent } from './components/addbook/addbook.component';
+import {MatInputModule,MatFormFieldModule,MatButtonModule,MatDialogModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +20,20 @@ import { HttpModule } from '@angular/http';
     ContentComponent,
     BannerComponent,
     BookComponent,
-    FilterPipe
+    FilterPipe,
+    AddbookComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDialogModule
   ],
+  entryComponents:[AddbookComponent],
   providers: [BookService],
   bootstrap: [AppComponent]
 })

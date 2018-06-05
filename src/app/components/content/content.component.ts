@@ -1,7 +1,8 @@
+import { AddbookComponent } from './../addbook/addbook.component';
 import { Component, OnInit } from '@angular/core';
 import { IBook } from '../../interface/IBook.class';
 import { BookService } from '../../services/book.service';
-
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -12,7 +13,7 @@ export class ContentComponent implements OnInit {
   isViewList:boolean = false;
   keyword:String = '';
   books:IBook[] = [];
-  constructor(private booksService : BookService) { }
+  constructor(private booksService : BookService,public dialog: MatDialog) { }
 
   ngOnInit() {
     this.booksService.books.subscribe(data=>{
@@ -25,5 +26,10 @@ export class ContentComponent implements OnInit {
   }
   searchBook(keyword: string){
     this.booksService.searchBooks(keyword);
+  }
+  openDialog(){
+    let dialogRef = this.dialog.open(AddbookComponent,{
+      width: '500px'
+    });
   }
 }
