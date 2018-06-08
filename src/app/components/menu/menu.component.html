@@ -16,11 +16,11 @@
       <li><a href="#">LOG IN</a></li>
       <li><a href="#">SIGN UP</a></li>
       <li>
-          <input type="search" [(ngModel)]='keyword' (change)="searchBook(keyword)" class="search" placeholder="Search book">       
+          <input type="search" [(ngModel)]='keyword' (keyup)="searchBook(keyword)" class="search" placeholder="Search book">       
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right menu">
-      <li><a href="#">E-BOOKS</a></li>
+      <li><a [routerLink]="['/']">E-BOOKS</a></li>
       <li><a href="#">CLASS</a></li> 
     </ul>
   </div><!-- /.navbar-collapse -->

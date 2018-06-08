@@ -22,9 +22,14 @@ export class BookService {
   getBooks(){
     this.getBookFromServer();
   }
+  getById(id: string){
+    return this.http.get(this.api+ `/${id}`);
+  }
   searchBooks(keyword : string){
-    let books = this._books.getValue().filter(x=>x.name.toLowerCase().includes(keyword.toLowerCase()));
-    this._books.next(books);
+    let result = this._books;
+    // let books = result.getValue().filter(x=>x.name.toLowerCase().includes(keyword.toLowerCase()));
+    // this._books.next(books);
+    return result.getValue().filter(x=>x.name.toLowerCase().includes(keyword.toLowerCase()));
   }
   addBook(book : IBook){
     book.id = uuid.v4();

@@ -1,3 +1,4 @@
+import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
@@ -13,6 +14,19 @@ import { BookService } from './services/book.service';
 import { HttpModule } from '@angular/http';
 import { AddbookComponent } from './components/addbook/addbook.component';
 import {MatInputModule,MatFormFieldModule,MatButtonModule,MatDialogModule} from '@angular/material';
+import {Routes, RouterModule} from '@angular/router';
+
+const appRoute: Routes = [
+  {
+    path:'',
+    component:ContentComponent
+  },
+  {
+    path:'book/:id',
+    component:BookDetailComponent
+  }
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +35,8 @@ import {MatInputModule,MatFormFieldModule,MatButtonModule,MatDialogModule} from 
     BannerComponent,
     BookComponent,
     FilterPipe,
-    AddbookComponent    
+    AddbookComponent,
+    BookDetailComponent  
   ],
   imports: [
     BrowserModule,
@@ -31,7 +46,8 @@ import {MatInputModule,MatFormFieldModule,MatButtonModule,MatDialogModule} from 
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule.forRoot(appRoute)
   ],
   entryComponents:[AddbookComponent],
   providers: [BookService],

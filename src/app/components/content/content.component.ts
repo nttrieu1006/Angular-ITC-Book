@@ -25,7 +25,7 @@ export class ContentComponent implements OnInit {
     this.isViewList = change;
   }
   searchBook(keyword: string){
-    this.booksService.searchBooks(keyword);
+    this.books =  this.booksService.searchBooks(keyword);
   }
   openDialog(){
     let dialogRef = this.dialog.open(AddbookComponent,{

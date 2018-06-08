@@ -1,3 +1,4 @@
+import { IBook } from './../../interface/IBook.class';
 import { BookService } from './../../services/book.service';
 import { Component, OnInit } from '@angular/core';
 
